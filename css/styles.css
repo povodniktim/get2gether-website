@@ -378,8 +378,14 @@ nav {
   font-weight: 900;
 }
 
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .logo-nav-img {
-  width: 100px;
+  width: 5rem;
   height: auto;
 }
 
@@ -798,7 +804,7 @@ nav {
 .subscribe-btn {
   background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   border: none;
-  box-shadow: 0 10px 30px rgba(223, 27, 60, 0.3);
+  box-shadow: 0 10px 30px rgba(10, 140, 218, 0.3);
   color: #ffffff;
   outline: none;
   padding: 15px 60px;
@@ -822,8 +828,18 @@ nav {
 }
 
 .app-logo {
-  -webkit-filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
-  filter: drop-shadow(0 10px 30px rgba(223, 27, 60, 0.3));
+  width: 10rem;
+  height: auto;
+}
+
+.download-description {
+  max-width: 50rem;
+}
+
+.mobile-store-img {
+  width: 20rem;
+  height: auto;
+  margin: 0 !important;
 }
 /* End: Download The App Section Styling */
 
@@ -910,6 +926,11 @@ nav {
 
   .logo {
     font-size: 1.875rem;
+  }
+
+  .logo-nav-img {
+    width: 4rem;
+    height: auto;
   }
 
   #navbar {

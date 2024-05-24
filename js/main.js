@@ -26,16 +26,16 @@ window.onscroll = function () {
 
 var navbar = document.querySelector("nav");
 var services = document.querySelector("#features");
-const appLogo = document.getElementById('app-logo');
+const appLogo = document.getElementById("app-logo");
 var sticky = services.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset > sticky) {
     navbar.classList.add("sticky");
-    appLogo.src = 'images/g2g-logo.png';
+    appLogo.src = "images/g2g-logo-B&O.png";
   } else {
     navbar.classList.remove("sticky");
-    appLogo.src = 'images/g2g-logo-cropped.png';
+    appLogo.src = "images/g2g-logo-W&O.png";
   }
 }
 
