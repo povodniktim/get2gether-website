@@ -592,18 +592,6 @@ nav {
   outline: none;
   /* Remove outline */
   background: #0a8cda;
-  /* Old browsers */
-  background: -moz-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,
-      #0a8cda 37%,
-      #196c9e 98%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
   /* IE6-9 */
@@ -616,16 +604,13 @@ nav {
   height: 50px;
   border-radius: 50%;
   /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
-  box-shadow: 0 10px 30px rgba(54, 54, 54, 0.3);
+  font-size: 20px;
 }
 
 #scrollUp:hover {
-  background-color: #555;
-  /* Add a dark-grey background on hover */
-  transform: scale(1.1);
-  transition: 0.3s;
+  background-color: #0b93e7;
+  transform: scale(1.05);
+  transition: 0.2s;
 }
 
 /* End: Header Section Styling */
@@ -1103,10 +1088,6 @@ nav {
     font-size: 16px;
   }
 
-  .language-option {
-    margin: 5px auto;
-  }
-
   #testimonial .col {
     margin-bottom: 50px;
   }
@@ -1289,10 +1270,6 @@ nav {
     margin: 8px 0;
     margin-right: 20px;
     font-size: 18px;
-  }
-
-  .language-option {
-    margin: 5px auto;
   }
 
   #testimonial .col {
