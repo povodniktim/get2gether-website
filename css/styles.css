@@ -185,7 +185,7 @@ html {
 
 ::selection {
   background-color: #ffffff;
-  color: #d90647;
+  color: #0a8cda;
 }
 
 body {
@@ -255,7 +255,7 @@ section {
 .preloader .loader {
   height: 2.5rem;
   width: 2.5rem;
-  border: 0.25rem solid #d90647;
+  border: 0.25rem solid #0a8cda;
   border-radius: 50%;
   border-top: 0.25rem solid transparent;
   border-bottom: 0.25rem solid transparent;
@@ -316,7 +316,7 @@ section {
 }
 
 .red_dot {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -341,23 +341,23 @@ section {
 
 /* Header Section Styling */
 #home {
-  background: #d90647; /* Old browsers */
+  background: #0a8cda; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff;
   height: 100%;
@@ -376,6 +376,11 @@ nav {
 .logo {
   font-size: 3.125rem;
   font-weight: 900;
+}
+
+.logo-nav-img {
+  width: 100px;
+  height: auto;
 }
 
 #navbar ul li {
@@ -398,13 +403,13 @@ nav {
   background-color: #fff;
   z-index: 500;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  color: #d90647;
+  color: #0a8cda;
   padding: 10px 40px;
   transition: 0.3s;
 }
 
 .sticky .logo {
-  color: #d90647;
+  color: #0a8cda;
 }
 
 .sticky #navbar ul li a {
@@ -412,7 +417,7 @@ nav {
 }
 
 .sticky #navbar ul li a:hover {
-  color: #d90647;
+  color: #0a8cda;
 }
 
 .sticky .navbar {
@@ -451,7 +456,7 @@ nav {
   background-color: #ffffff;
   z-index: 9999;
   overflow: hidden;
-  color: #d90647;
+  color: #0a8cda;
   transition: 0.3s;
   text-align: center;
 }
@@ -474,7 +479,7 @@ nav {
 }
 
 .overlay-content a:hover {
-  color: #d90647;
+  color: #0a8cda;
 }
 /* End: Mobile Menu Styling */
 
@@ -498,7 +503,7 @@ nav {
 }
 
 .download-btn {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -549,23 +554,23 @@ nav {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background: #d90647; /* Old browsers */
+  background: #0a8cda; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
@@ -642,7 +647,7 @@ nav {
 }
 
 .company-name {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -682,23 +687,23 @@ nav {
 
 /* How To Section Styling */
 #howto {
-  background: #d90647; /* Old browsers */
+  background: #0a8cda; /* Old browsers */
   background: -moz-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* FF3.6-15 */
   background: -webkit-linear-gradient(
     top,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(
     to bottom,
-    #d90647 37%,
-    #eb402c 98%
+    #0a8cda 37%,
+    #196c9e 98%
   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d90647', endColorstr='#eb402c',GradientType=0 ); /* IE6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff;
   height: 24.375rem;
@@ -786,12 +791,12 @@ nav {
   border-radius: 3.125rem;
   padding: 0 30px;
   padding-right: 210px;
-/*   position: relative; */
+  /*   position: relative; */
   font-size: 18px;
 }
 
 .subscribe-btn {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   border: none;
   box-shadow: 0 10px 30px rgba(223, 27, 60, 0.3);
   color: #ffffff;
@@ -801,7 +806,7 @@ nav {
   margin-left: -200px;
 }
 .subscribe-btn:hover {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   color: #ffffff;
 }
 /* End: Subscribe Section Styling */
@@ -840,7 +845,7 @@ nav {
 }
 
 .links ul li:hover {
-  background: linear-gradient(to bottom, #d90647 10%, #eb402c 100%);
+  background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
