@@ -28,14 +28,17 @@
   white-space: nowrap;
   width: 200px;
 }
+
 .nice-select:hover {
   border-color: #dbdbdb;
 }
+
 .nice-select:active,
 .nice-select.open,
 .nice-select:focus {
   border-color: #999;
 }
+
 .nice-select:after {
   border-bottom: 2px solid #363636;
   border-right: 2px solid #363636;
@@ -57,11 +60,13 @@
   transition: all 0.15s ease-in-out;
   width: 5px;
 }
+
 .nice-select.open:after {
   -webkit-transform: rotate(-135deg);
   -ms-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
+
 .nice-select.open .list {
   top: auto !important;
   bottom: 100%;
@@ -71,41 +76,51 @@
   -ms-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
 }
+
 .nice-select.disabled {
   border-color: #ededed;
   color: #999;
   pointer-events: none;
 }
+
 .nice-select.disabled:after {
   border-color: #cccccc;
 }
+
 .nice-select.wide {
   width: 100%;
 }
+
 .nice-select.wide .list {
   left: 0 !important;
   right: 0 !important;
 }
+
 .nice-select.right {
   float: right;
 }
+
 .nice-select.right .list {
   left: auto;
   right: 0;
 }
+
 .nice-select.small {
   font-size: 18px;
   height: 50px;
   line-height: 34px;
 }
+
 .nice-select.small:after {
   height: 4px;
   width: 4px;
 }
+
 .nice-select.small .option {
   line-height: 34px;
   min-height: 34px;
 }
+
 .nice-select .list {
   background-color: #fff;
   border-radius: 5px;
@@ -131,9 +146,11 @@
   z-index: 9;
   width: 200px;
 }
+
 .nice-select .list:hover .option:not(:hover) {
   background-color: transparent !important;
 }
+
 .nice-select .option {
   cursor: pointer;
   font-weight: 400;
@@ -147,14 +164,17 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 .nice-select .option:hover,
 .nice-select .option.focus,
 .nice-select .option.selected.focus {
   background-color: #f6f6f6;
 }
+
 .nice-select .option.selected {
   font-weight: bold;
 }
+
 .nice-select .option.disabled {
   background-color: transparent;
   color: #999;
@@ -286,6 +306,7 @@ section {
     -webkit-transform: rotate(360deg);
   }
 }
+
 /* End: Preloader */
 
 /* End: CSS Global Rules */
@@ -335,29 +356,29 @@ section {
   max-width: 1176px;
   margin: auto;
 }
+
 /* End: Reusable Components */
 
 /* Main CSS Rules */
 
 /* Header Section Styling */
 #home {
-  background: #0a8cda; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
+  background: #0a8cda;
+  /* Old browsers */
+  background: -moz-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
+  /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff;
   height: 100%;
@@ -397,7 +418,7 @@ nav {
 }
 
 #navbar ul li:hover {
-  text-decoration: line-through;
+  text-decoration: underline;
 }
 
 /* Sticky Navbar */
@@ -441,10 +462,12 @@ nav {
 #myNav {
   display: block;
 }
+
 #mobileNav {
   position: absolute;
   right: 10%;
-  display: none; /* Hide Mobile Nav on Desktop or big devices */
+  display: none;
+  /* Hide Mobile Nav on Desktop or big devices */
   cursor: pointer;
   user-select: none;
 }
@@ -487,6 +510,7 @@ nav {
 .overlay-content a:hover {
   color: #0a8cda;
 }
+
 /* End: Mobile Menu Styling */
 
 /* Hero Section Styling */
@@ -553,42 +577,53 @@ nav {
 }
 
 #scrollUp {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background: #0a8cda; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background: #0a8cda;
+  /* Old browsers */
+  background: -moz-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
+  /* IE6-9 */
   background-repeat: no-repeat;
-  color: #ffffff; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
+  color: #ffffff;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  border-radius: 50%;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
   box-shadow: 0 10px 30px rgba(54, 54, 54, 0.3);
 }
 
 #scrollUp:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
+  /* Add a dark-grey background on hover */
   transform: scale(1.1);
   transition: 0.3s;
 }
@@ -609,15 +644,18 @@ nav {
 .second-features-row {
   margin-top: 6.25rem;
 }
+
 /* End: Features Section Styling */
 
 /* Testimonial Section Styling */
 #testimonial {
   margin-top: 50px;
 }
+
 #testimonial .stylish_heading {
   text-align: center;
 }
+
 #testimonial .row {
   margin-top: 6.25rem;
 }
@@ -689,33 +727,38 @@ nav {
   font-size: 16px;
   line-height: 1;
 }
+
 /* End: Testimonial Section Styling */
 
 /* How To Section Styling */
 #howto {
-  background: #0a8cda; /* Old browsers */
-  background: -moz-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* FF3.6-15 */
-  background: -webkit-linear-gradient(
-    top,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #0a8cda 37%,
-    #196c9e 98%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0A8CDA', endColorstr='#196c9e',GradientType=0 ); /* IE6-9 */
+  background: #0a8cda;
+  /* Old browsers */
+  background: -moz-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,
+      #0a8cda 37%,
+      #196c9e 98%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
+  /* IE6-9 */
   background-repeat: no-repeat;
   color: #ffffff;
   height: 24.375rem;
   width: 100%;
   position: relative;
   margin-top: 6.25rem;
+}
+
+.howto-icon {
+  font-size: 2.5rem;
+  height: auto;
 }
 
 #howto p {
@@ -770,6 +813,7 @@ nav {
 .last-item {
   margin: 20px 0;
 }
+
 /* End: How To Section Styling */
 
 /* Subscribe Section Styling */
@@ -811,10 +855,12 @@ nav {
   position: absolute;
   margin-left: -200px;
 }
+
 .subscribe-btn:hover {
   background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   color: #ffffff;
 }
+
 /* End: Subscribe Section Styling */
 
 /* Download The App Section Styling */
@@ -841,6 +887,7 @@ nav {
   height: auto;
   margin: 0 !important;
 }
+
 /* End: Download The App Section Styling */
 
 /* Footer Section Styling */
@@ -870,6 +917,7 @@ nav {
 .links ul li a {
   color: #363636;
 }
+
 /* End: Footer Section Styling */
 
 /* End: Main CSS Rules */
@@ -879,6 +927,7 @@ nav {
   body {
     font-size: 16px !important;
   }
+
   h1 {
     font-size: 36px;
   }
@@ -943,10 +992,12 @@ nav {
     float: none;
     margin-left: 0;
   }
+
   .hero-description p {
     font-size: 16px;
     margin-bottom: 1.875rem;
   }
+
   .hero-img {
     display: none;
   }
@@ -1043,6 +1094,7 @@ nav {
     justify-content: center;
     text-align: center;
   }
+
   .links ul li {
     text-align: center;
     display: inline-block;
@@ -1058,9 +1110,11 @@ nav {
   #testimonial .col {
     margin-bottom: 50px;
   }
+
   #download {
     padding: 50px 0;
   }
+
   #subscribe {
     padding: 100px 0;
   }
@@ -1080,6 +1134,7 @@ nav {
   body {
     font-size: 18px;
   }
+
   h1 {
     font-size: 50px;
   }
@@ -1107,6 +1162,7 @@ nav {
   #mobileNav {
     display: block;
   }
+
   #navbar {
     display: none;
   }
@@ -1125,9 +1181,11 @@ nav {
     float: none;
     margin-left: 0;
   }
+
   .hero-description p {
     margin-bottom: 1.875rem;
   }
+
   .hero-img {
     display: none;
   }
@@ -1224,6 +1282,7 @@ nav {
     justify-content: center;
     text-align: center;
   }
+
   .links ul li {
     text-align: center;
     display: inline-block;
@@ -1239,9 +1298,11 @@ nav {
   #testimonial .col {
     margin-bottom: 50px;
   }
+
   #download {
     padding: 50px 0;
   }
+
   #subscribe {
     padding: 100px 0;
   }
@@ -1265,6 +1326,7 @@ nav {
   h2 {
     font-size: 40px;
   }
+
   #howto h4 {
     font-size: 1.3rem;
     font-weight: 900;
@@ -1282,19 +1344,24 @@ nav {
   section {
     padding: 20px;
   }
+
   .btn {
     padding: 15px 30px;
   }
+
   #mobileNav {
     display: block;
     right: 5%;
   }
+
   #mobileNav span {
     font-size: 2.5rem;
   }
+
   #navbar {
     display: none;
   }
+
   .overlay-content a {
     font-size: 40px;
   }
@@ -1367,6 +1434,7 @@ nav {
     margin-left: -100px;
     position: absolute;
   }
+
   #subscribe {
     padding: 100px;
   }
@@ -1389,6 +1457,7 @@ nav {
   h2 {
     font-size: 40px;
   }
+
   #howto h4 {
     font-size: 1.3rem;
     font-weight: 900;
@@ -1406,19 +1475,24 @@ nav {
   section {
     padding: 20px;
   }
+
   .btn {
     padding: 15px 30px;
   }
+
   #mobileNav {
     display: block;
     right: 5%;
   }
+
   #mobileNav span {
     font-size: 2.5rem;
   }
+
   #navbar {
     display: none;
   }
+
   .overlay-content a {
     font-size: 40px;
   }
@@ -1490,6 +1564,7 @@ nav {
     margin-left: -100px;
     position: absolute;
   }
+
   #subscribe {
     padding: 100px;
   }
@@ -1510,6 +1585,7 @@ nav {
     font-size: 1.125rem;
     width: 100%;
   }
+
   #subscribe {
     padding: 100px;
   }
