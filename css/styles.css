@@ -540,7 +540,7 @@ nav {
 }
 
 .hero-img {
-  max-width: 28% !important;
+  max-width: 25% !important;
   float: right;
   z-index: 1;
   position: absolute;
@@ -618,8 +618,13 @@ nav {
 /* Features Section Styling */
 #features {
   height: 100%;
-  padding-bottom: 200px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.welcome-page-container {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
 }
 
 .features_3 {
@@ -684,7 +689,6 @@ nav {
 }
 
 .message {
-  margin-bottom: 20px;
   font-style: italic;
   line-height: 1.5;
   font-size: 18px;
