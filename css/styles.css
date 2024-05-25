@@ -336,7 +336,7 @@ section {
   transform: scale(1.03);
 }
 
-.red_dot {
+.blue_dot {
   background: linear-gradient(to bottom, #0a8cda 10%, #196c9e 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -356,26 +356,23 @@ section {
   max-width: 1176px;
   margin: auto;
 }
-
 /* End: Reusable Components */
 
 /* Main CSS Rules */
+
+/* Scroll Animation */
+/* TODO: Add Scroll Animation */
+/* End: Scroll Animation */
 
 /* Header Section Styling */
 #home {
   background: #0a8cda;
   /* Old browsers */
-  background: -moz-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: -moz-linear-gradient(top, #0a8cda 37%, #196c9e 98%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: -webkit-linear-gradient(top, #0a8cda 37%, #196c9e 98%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: linear-gradient(to bottom, #0a8cda 37%, #196c9e 98%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
   /* IE6-9 */
@@ -520,7 +517,7 @@ nav {
 }
 
 .hero-description {
-  margin-top: 3.125rem;
+  margin-top: 2.125rem;
   float: left;
   margin-left: 1.875rem;
 }
@@ -528,7 +525,7 @@ nav {
 .hero-description p {
   font-size: 1.25rem;
   margin-top: 1.25rem;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   color: #fff;
 }
 
@@ -544,11 +541,9 @@ nav {
   float: right;
   z-index: 1;
   position: absolute;
-  /* right: 9.375rem; */
 }
 
 /* Custom Shape Divider */
-
 .shape-divider {
   margin-top: 100px;
 }
@@ -723,17 +718,11 @@ nav {
 #howto {
   background: #0a8cda;
   /* Old browsers */
-  background: -moz-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: -moz-linear-gradient(top, #0a8cda 37%, #196c9e 98%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: -webkit-linear-gradient(top, #0a8cda 37%, #196c9e 98%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,
-      #0a8cda 37%,
-      #196c9e 98%);
+  background: linear-gradient(to bottom, #0a8cda 37%, #196c9e 98%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0A8CDA', endColorstr='#196c9e', GradientType=0);
   /* IE6-9 */
