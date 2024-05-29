@@ -1468,7 +1468,7 @@ nav {
   }
 
   .hero-img {
-    max-width: 40% !important;
+    max-width: 38% !important;
     right: 0.375rem;
   }
 
@@ -1548,7 +1548,7 @@ nav {
   }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* Extra large devices (large desktops, 1200px - 1500px) */
 @media (min-width: 1200px) {
   .little-description {
     margin-top: 1.875rem;
@@ -1572,5 +1572,11 @@ nav {
   .big_image {
     max-width: 350px;
     margin-top: -135px;
+  }
+
+  .hero-img {
+    /* max-width: 30% !important; */
+    /* After 1200px size of the image is fixed*/
+    width: 26rem;
   }
 }
