@@ -356,6 +356,7 @@ section {
   max-width: 1176px;
   margin: auto;
 }
+
 /* End: Reusable Components */
 
 /* Main CSS Rules */
@@ -810,17 +811,45 @@ nav {
   margin-top: 5rem;
 }
 
-.form-input {
-  border: none;
-  height: 50px;
-  outline: none;
-  width: 40%;
-  background-color: #f8f8f8;
-  border-radius: 3.125rem;
-  padding: 0 30px;
-  padding-right: 210px;
-  /*   position: relative; */
-  font-size: 18px;
+.email-form {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 20rem;
+
+  input {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+  }
+
+  .email-form--submit {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: none;
+    background-color: #fba342;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .email-form--submit:hover {
+    background-color: #f9a64d;
+  }
+
+  .email-form--submit:active {
+    background-color: #f9a64d;
+  }
+
+  .email-form--submit:disabled {
+    background-color: #fba342;
+    color: #ffffff;
+    cursor: not-allowed;
+  }
 }
 
 .subscribe-btn {
@@ -1579,4 +1608,42 @@ nav {
     /* After 1200px size of the image is fixed*/
     width: 26rem;
   }
+}
+
+#response-message {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  border-radius: 8px;
+  visibility: hidden;
+  animation: slideDown 1s ease-in-out;
+}
+
+.danger {
+  background-color: #e80000 !important;
+}
+
+.success {
+  background-color: #fba342 !important;
+}
+
+#response-message.active {
+  visibility: visible;
+  top: 0.25rem;
+  transition: 0.3s;
+}
+
+#response-message.close-motion {
+  top: -5rem;
+  transition: 0.3s;
+}
+
+.spinning {
+  animation: spin 2s linear infinite;
 }
