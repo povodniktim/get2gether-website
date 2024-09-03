@@ -1616,7 +1616,7 @@ nav {
   left: 0;
   right: 0;
   margin: auto;
-  width: 50%;
+  max-width: 30%;
   padding: 10px;
   text-align: center;
   color: #fff;
