@@ -182,127 +182,11 @@
                 ustvarjaj nova prijateljstva! Naj pomanjkanje soigralcev ali
                 prave družbe ne bo več ovira!
               </p>
-              <form id="email-form" class="email-form">
-                <input
-                  type="email"
-                  name="Email"
-                  id="Email"
-                  class="form-input"
-                  placeholder="Vnesi svoj email"
-                  required
-                />
-                <button
-                  class="email-form--submit"
-                  id="email-form--submit"
-                  type="submit"
-                >
-                  <i
-                    id="email-form-spinner"
-                    class="fa-solid fa-spinner spinning"
-                    style="display: none"
-                  ></i>
-                  <span id="email-form-button-text"> Prijavi se </span>
-                </button>
-              </form>
-              <div id="response-message"></div>
-              <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                  const form = document.getElementById("email-form");
-                  const responseMessage =
-                    document.getElementById("response-message");
 
-                  const submitBtn =
-                    document.getElementById("email-form--submit");
-                  const spinner = document.getElementById("email-form-spinner");
-                  const buttonText = document.getElementById(
-                    "email-form-button-text"
-                  );
-
-                  let closeTimeout;
-
-                  const resetAll = () => {
-                    responseMessage.textContent = "";
-                    responseMessage.classList.remove("active");
-                    responseMessage.classList.remove("danger");
-                    responseMessage.classList.remove("warning");
-                    responseMessage.classList.remove("success");
-                    responseMessage.classList.remove("close-motion");
-                  };
-
-                  const resetTimeouts = () => {
-                    if (closeTimeout) {
-                      clearTimeout(closeTimeout);
-                      closeTimeout = null;
-                    }
-                  };
-
-                  form.addEventListener("submit", async function (event) {
-                    event.preventDefault();
-
-                    resetTimeouts();
-                    resetAll();
-
-                    const formData = new FormData(form);
-                    const email = formData.get("Email");
-
-                    try {
-                      submitBtn.disabled = true;
-                      spinner.style.display = "inline-block";
-                      buttonText.style.display = "none";
-
-                      const response = await fetch(
-                        "https://dev-api.get2gether.si/subscription-emails",
-                        {
-                          method: "POST",
-                          body: JSON.stringify({ Email: email }),
-                          headers: {
-                            "Content-Type": "application/json",
-                          },
-                        }
-                      );
-
-                      spinner.style.display = "none";
-                      buttonText.style.display = "inline-block";
-
-                      const data = await response.json();
-
-                      if (response.ok) {
-                        responseMessage.textContent =
-                          "Hvala! Obvestili vas bomo ob izdaji aplikacije";
-                        responseMessage.classList.add("success");
-                        form.reset();
-                      } else if (
-                        data?.errors.includes("EMAIL_ALREADY_SUBSCRIBED")
-                      ) {
-                        responseMessage.textContent =
-                          "Ta e-poštni naslov je že prijavljen.";
-                        responseMessage.classList.add("danger");
-                      } else {
-                        throw new Error("An error occurred");
-                      }
-                    } catch (error) {
-                      responseMessage.textContent =
-                        "Prišlo je do napake. Prosimo, poskusite znova.";
-                      responseMessage.classList.add("danger");
-                    } finally {
-                      responseMessage.classList.add("active");
-
-                      closeTimeout = setTimeout(() => {
-                        responseMessage.classList.add("close-motion");
-                        responseMessage.classList.remove("active");
-
-                        closeTimeout = setTimeout(() => {
-                          responseMessage.classList.remove("close-motion");
-                          resetAll();
-                        }, 1500);
-                      }, 3500);
-                      submitBtn.disabled = false;
-                    }
-                  });
-                });
-              </script>
-
-              <!-- <a href="#download" class="btn"><span class="download-btn">Prenesi Zdaj</span></a> -->
+              <a class="btn" onclick="lightBoxOpen()">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="download-btn">Obvesti Me</span>
+              </a>
             </div>
           </div>
           <div class="col span_1_of_2">
@@ -506,29 +390,6 @@
     </section>
     <!-- End: How To Section -->
 
-    <!-- Subscribe Section -->
-    <!-- <section id="subscribe">
-      <div class="row">
-        <h2 class="stylish_heading">
-          Subscribe to our newsletter <span class="blue_dot">.</span>
-        </h2>
-        <p class="">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna.
-        </p>
-      </div>
-      <div class="subscribe-form">
-        <input
-          class="form-input"
-          type="email"
-          placeholder="Your email address"
-          required
-        />
-        <input type="submit" class="btn subscribe-btn" value="Subscribe" />
-      </div>
-    </section> -->
-    <!-- End: Subscribe Section -->
-
     <!-- Download The App Section -->
     <section id="download">
       <div class="row">
@@ -588,6 +449,153 @@
       </div>
     </section>
     <!-- End: Footer Section -->
+
+    <div class="lightbox" id="emailLightbox">
+      <div class="lightbox-ctn">
+        <span class="close-lb" onclick="lightBoxClose()">x</span>
+        <div class="content-lb">
+          <img
+            class="content-lb--img"
+            src="images/newsletter.png"
+            alt="Newsletter"
+          />
+          <h2 class="content-lb--title">Ne zamudi začetka!</h2>
+          <p class="content-lb--description">
+            Vpiši svoj email, da boš med prvimi izvedel, ko bo aplikacija na
+            voljo!
+          </p>
+          <form class="content-lb--subscribe-form" id="subscribe-form">
+            <input
+              class="content-lb--subscribe-form--input"
+              type="email"
+              name="email"
+              placeholder="Vnesi svoj email"
+              required
+            />
+            <button
+              class="content-lb--subscribe-form--submit"
+              id="subscribe-form--submit"
+              type="submit"
+            >
+              <i
+                id="subscribe-form-spinner"
+                class="content-lb--subscribe-form--submit--spinner fa-solid fa-spinner spinning"
+                style="display: none"
+              ></i>
+              <span id="subscribe-form-button-text"> Prijavi se </span>
+            </button>
+          </form>
+          <div id="response-message"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Show lightbox on page load
+        document.getElementById("emailLightbox").classList.remove("closed");
+
+        // Close lightbox function
+        lightBoxClose = function () {
+          document.getElementById("emailLightbox").classList.add("closed");
+        };
+
+        // Open lightbox function
+        lightBoxOpen = function () {
+          document.getElementById("emailLightbox").classList.remove("closed");
+        };
+
+        const form = document.getElementById("subscribe-form");
+        const responseMessage = document.getElementById("response-message");
+
+        const submitBtn = document.getElementById("subscribe-form--submit");
+        const spinner = document.getElementById("subscribe-form-spinner");
+        const buttonText = document.getElementById(
+          "subscribe-form-button-text"
+        );
+
+        let closeTimeout;
+
+        const resetAll = () => {
+          responseMessage.textContent = "";
+          responseMessage.classList.remove("active");
+          responseMessage.classList.remove("danger");
+          responseMessage.classList.remove("warning");
+          responseMessage.classList.remove("success");
+          responseMessage.classList.remove("close-motion");
+        };
+
+        const resetTimeouts = () => {
+          if (closeTimeout) {
+            clearTimeout(closeTimeout);
+            closeTimeout = null;
+          }
+        };
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          resetTimeouts();
+          resetAll();
+
+          const formData = new FormData(form);
+          const email = formData.get("email");
+
+          try {
+            submitBtn.disabled = true;
+            spinner.style.display = "inline-block";
+            buttonText.style.display = "none";
+
+            const response = await fetch(
+              "https://dev-api.get2gether.si/subscription-emails",
+              {
+                method: "POST",
+                body: JSON.stringify({ Email: email }),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            );
+
+            spinner.style.display = "none";
+            buttonText.style.display = "inline-block";
+
+            const data = await response.json();
+
+            if (response.ok) {
+              responseMessage.textContent = "Prijava je bila uspešna!";
+              responseMessage.classList.add("success");
+              form.reset();
+              // Close lightbox after 2 seconds
+              setTimeout(lightBoxClose, 2000);
+            } else if (data?.errors.includes("EMAIL_ALREADY_SUBSCRIBED")) {
+              responseMessage.textContent =
+                "Ta e-poštni naslov je že prijavljen.";
+              responseMessage.classList.add("danger");
+            } else {
+              throw new Error("Prišlo je do napake.");
+            }
+          } catch (error) {
+            responseMessage.textContent =
+              "Prišlo je do napake. Prosimo, poskusite znova.";
+            responseMessage.classList.add("danger");
+          } finally {
+            responseMessage.classList.add("active");
+
+            closeTimeout = setTimeout(() => {
+              responseMessage.classList.add("close-motion");
+              responseMessage.classList.remove("active");
+
+              closeTimeout = setTimeout(() => {
+                responseMessage.classList.remove("close-motion");
+                resetAll();
+              }, 1500);
+            }, 3500);
+            submitBtn.disabled = false;
+          }
+        });
+      });
+    </script>
 
     <!-- Required JavaScript Files & CDN -->
     <!-- JQuery CDN -->
