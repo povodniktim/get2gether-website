@@ -930,6 +930,34 @@ nav {
   color: #363636;
 }
 
+.footer-icons-ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+
+  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 0 0.4rem;
+    font-size: 1.3rem;
+    border: 2px solid #0a8cda;
+    background-color: #0a8cda;
+    color: #fff;
+    border-radius: 10px;
+    transition: color 0.3s;
+    transition: background-color 0.3s;
+  }
+
+  i:hover {
+    color: #0a8cda;
+    background-color: #fff;
+  }
+}
+
 /* End: Footer Section Styling */
 
 /* End: Main CSS Rules */
@@ -1103,6 +1131,10 @@ nav {
     margin: 8px 0;
     margin-right: 20px;
     font-size: 16px;
+  }
+
+  .footer-icons-ctn {
+    margin: 1rem 0 0 0;
   }
 
   #testimonial .col {
@@ -1631,6 +1663,35 @@ nav {
     text-align: center;
     width: 80%;
     margin-bottom: 1rem;
+  }
+
+  .content-lb--social-ctn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin: 0 0.4rem;
+      font-size: 1.3rem;
+      border: 2px solid #fba342;
+      background-color: #fff;
+      color: #fba342;
+      border-radius: 10px;
+      transition: color 0.3s;
+      transition: background-color 0.3s;
+    }
+
+    i:hover {
+      color: #fff;
+      background-color: #fba342;
+      cursor: pointer;
+    }
   }
 
   .content-lb--subscribe-form {

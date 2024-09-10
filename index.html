@@ -447,9 +447,25 @@
           <li><a href="#download">Prenos</a></li>
         </ul>
       </div>
+      <div class="footer-icons-ctn">
+        <i
+          class="fa-brands fa-instagram"
+          onclick="openSocialMedia('instagram')"
+        ></i>
+        <i
+          class="fa-brands fa-facebook"
+          onclick="openSocialMedia('facebook')"
+        ></i>
+        <i
+          class="fa-brands fa-tiktok"
+          onclick="openSocialMedia('tiktok')"
+        ></i>
+      </div>
+    </div>
     </section>
     <!-- End: Footer Section -->
 
+    <!-- Lightbox -->
     <div class="lightbox" id="emailLightbox">
       <div class="lightbox-ctn">
         <span class="close-lb" onclick="lightBoxClose()">x</span>
@@ -464,6 +480,22 @@
             Vpiši svoj email, da boš med prvimi izvedel, ko bo aplikacija na
             voljo!
           </p>
+
+          <div class="content-lb--social-ctn">
+            <i
+              class="fa-brands fa-instagram"
+              onclick="openSocialMedia('instagram')"
+            ></i>
+            <i
+              class="fa-brands fa-facebook"
+              onclick="openSocialMedia('facebook')"
+            ></i>
+            <i
+              class="fa-brands fa-tiktok"
+              onclick="openSocialMedia('tiktok')"
+            ></i>
+          </div>
+
           <form class="content-lb--subscribe-form" id="subscribe-form">
             <input
               class="content-lb--subscribe-form--input"
@@ -596,6 +628,28 @@
         });
       });
     </script>
+
+    <script>
+      function openSocialMedia(platform) {
+        let url;
+        switch (platform) {
+          case "instagram":
+            url = "https://www.instagram.com";
+            break;
+          case "facebook":
+            url = "https://www.facebook.com/profile.php?id=61565185226464";
+            break;
+          case "tiktok":
+            url = "https://www.tiktok.com/@get2getherofficial";
+            break;
+          default:
+            return;
+        }
+        window.open(url, "_blank");
+      }
+    </script>
+
+    <!-- End: Lightbox -->
 
     <!-- Required JavaScript Files & CDN -->
     <!-- JQuery CDN -->
